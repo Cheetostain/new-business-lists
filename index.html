@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Florida New Business Lists by Lumora Group LLC</title>
+<meta name="description" content="A weekly spreadsheet of the businesses that just registered in your Florida county, built from the state's public daily filing files. Sold by Lumora Group LLC, Gainesville, Florida. Not affiliated with the State of Florida.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230b5d46'/%3E%3Crect%20x='7'%20y='8'%20width='18'%20height='3.2'%20rx='1'%20fill='%23e2f0e4'/%3E%3Crect%20x='7'%20y='14.4'%20width='18'%20height='3.2'%20rx='1'%20fill='%23ffffff'/%3E%3Crect%20x='7'%20y='20.8'%20width='11'%20height='3.2'%20rx='1'%20fill='%23e2f0e4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono&amp;family=Atkinson+Hyperlegible+Next:wght@400;700&amp;display=swap">
+<style>
+:root{
+  --paper:#ffffff;
+  --ink:#1d2622;
+  --muted:#4b5751;
+  --pine:#0b5d46;
+  --pine-deep:#07402f;
+  --rule:#d5ded9;
+  --wash:#f2f6f3;
+  --bar:#e2f0e4;
+  --bar-line:#b9d4c0;
+  --mask:#b4c8bb;
+  --mark:#ffe07a;
+  --lh:20px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Atkinson Hyperlegible Next",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--pine);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--pine-deep);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:3px}
+h1,h2,h3,h4{line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em;font-weight:700}
+h1{font-size:clamp(2.1rem,1.4rem + 3vw,3.3rem);letter-spacing:-.025em;max-width:15ch}
+h2{font-size:clamp(1.55rem,1.25rem + 1.1vw,2.05rem);letter-spacing:-.02em}
+h3{font-size:1.2rem}
+h4{font-size:1.05rem}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.25em}
+li{margin:0 0 .35em}
+b,strong{font-weight:700}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+@media (min-width:700px){.wrap{padding:0 28px}}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:10;border-radius:4px}
+.skip:focus{left:8px;color:#fff}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.fine{font-size:.95rem;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Top bar */
+.top{border-bottom:1px solid var(--rule);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;gap:22px;min-height:66px}
+.seller{font-weight:700;font-size:1.08rem;color:var(--ink);text-decoration:none;margin-right:auto}
+.seller:hover{color:var(--ink)}
+.top nav{display:flex;gap:22px}
+.top nav a{color:var(--ink);text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+@media (max-width:620px){.top nav{display:none}}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--pine);color:#fff;font-weight:700;text-decoration:none;padding:.72em 1.15em;border-radius:6px;line-height:1.2;border:2px solid var(--pine);text-align:center}
+.btn:hover{background:var(--pine-deep);border-color:var(--pine-deep);color:#fff;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--pine)}
+.btn.ghost:hover{background:var(--wash);color:var(--pine-deep)}
+.btn.sm{padding:.5em .9em;font-size:.95rem}
+.top .btn{padding:.55em .95em;font-size:.95rem}
+
+/* Sections */
+section{padding:60px 0;border-top:1px solid var(--rule)}
+section.wash{background:var(--wash)}
+.intro{max-width:40em;font-size:1.1rem}
+
+/* Hero */
+.hero{padding:52px 0 48px;border-top:0}
+.hero .wrap{display:grid;gap:36px}
+@media (min-width:840px){.hero .wrap{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:end}}
+.lede{font-size:1.2rem;max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 14px}
+.state-line{margin:22px 0 0;padding:2px 0 2px 14px;border-left:4px solid var(--pine);max-width:36em}
+.latest{border:1px solid var(--rule);border-radius:8px;padding:20px 20px 12px;background:var(--paper)}
+.latest h2{font-size:1.05rem;letter-spacing:0;margin-bottom:10px}
+.latest dl{margin:0}
+.latest dl div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-top:1px solid var(--rule)}
+.latest dt{color:var(--muted);font-size:.97rem}
+.latest dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.latest .fine{margin:10px 0 0;font-size:.87rem}
+
+/* The state's file, printed on green-bar paper */
+.file-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 18px;margin:0 0 8px}
+.file-head h3{margin:0;font-size:1.1rem}
+.file-head .fine{margin:0}
+.fname{font-family:"Atkinson Hyperlegible Mono",ui-monospace,Consolas,monospace;font-size:.92em;color:var(--ink)}
+.paper{position:relative;background:#fff;border:1px solid var(--bar-line);padding:0 24px}
+.paper::before,.paper::after{content:"";position:absolute;top:0;bottom:0;width:24px;background:radial-gradient(circle at 12px 12px,var(--wash) 0 4px,var(--bar-line) 4px 5px,transparent 5.5px) 0 0/24px 24px repeat-y}
+.paper::before{left:0;border-right:1px dashed var(--bar-line)}
+.paper::after{right:0;border-left:1px dashed var(--bar-line)}
+.paper pre{--lh:20px;margin:0;padding:10px 12px;height:340px;overflow:hidden;color:#26302b;font:400 12.5px/var(--lh) "Atkinson Hyperlegible Mono",ui-monospace,Consolas,monospace;white-space:break-spaces;overflow-wrap:anywhere;background:repeating-linear-gradient(to bottom,var(--bar) 0 calc(var(--lh)*2),#fff calc(var(--lh)*2) calc(var(--lh)*4)) 0 10px;-webkit-mask-image:linear-gradient(to bottom,#000 72%,transparent);mask-image:linear-gradient(to bottom,#000 72%,transparent)}
+.paper .m{background:repeating-linear-gradient(135deg,var(--mask) 0 2px,transparent 2px 5px);color:transparent;word-break:break-all}
+@media (max-width:560px){.paper{padding:0 18px}.paper::before,.paper::after{width:18px;background-position:-3px 0}.paper pre{--lh:17px;font-size:11px;height:480px;padding:8px 8px}}
+.paper mark,.sheet mark{background:var(--mark);color:var(--ink);padding:0 1px}
+.paper .more{font-family:"Atkinson Hyperlegible Next",system-ui,sans-serif;font-size:12px;color:var(--muted)}
+figure{margin:0}
+figcaption.below{margin:10px 0 0;font-size:.95rem;color:var(--muted);max-width:52em}
+
+.work{display:grid;gap:8px 36px;margin:44px 0}
+@media (min-width:760px){.work{grid-template-columns:minmax(0,15em) minmax(0,1fr)}}
+.work h3{margin:0}
+.work ul{list-style:none;padding:0;margin:0;display:grid;gap:10px 28px}
+@media (min-width:760px){.work ul{grid-template-columns:1fr 1fr}}
+.work li{margin:0;padding-left:14px;border-left:2px solid var(--bar-line)}
+
+.sheet-head{margin:0 0 8px}
+.sheet-head h3{margin:0 0 2px;font-size:1.1rem}
+.sheet-head p{margin:0}
+.scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:#fff}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.sheet table{min-width:660px}
+.sheet td:first-child{min-width:14em}
+.swipe{display:none}
+@media (max-width:700px){.swipe{display:inline}}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{background:var(--wash);font-size:.92rem}
+tbody tr:last-child td{border-bottom:0}
+td.none{color:var(--muted)}
+td.date{white-space:nowrap}
+.value{margin:36px 0 0;padding:18px 20px;background:#fff;border:1px solid var(--rule);border-left:5px solid var(--pine);border-radius:0 6px 6px 0;max-width:46em}
+.value p{margin:0}
+
+/* Who uses it */
+.roles{margin:0 0 20px;display:grid;gap:0 40px}
+@media (min-width:760px){.roles{grid-template-columns:1fr 1fr}}
+.roles div{padding:14px 0;border-top:1px solid var(--rule)}
+.roles dt{font-weight:700}
+.roles dd{margin:2px 0 0}
+
+/* Prices */
+.prices{list-style:none;padding:0;margin:8px 0 0}
+.price{display:grid;grid-template-areas:"name" "buy" "body";gap:14px 40px;padding:30px 0;border-top:1px solid var(--rule);margin:0}
+@media (min-width:760px){.price{grid-template-columns:minmax(0,1fr) 200px;grid-template-areas:"name buy" "body buy";grid-template-rows:auto 1fr}}
+.price h3{grid-area:name;font-size:1.25rem;margin:0}
+.pbody{grid-area:body}
+.price p{max-width:36em}
+.facts{margin:0 0 .5em;list-style:disc}
+.pbuy{grid-area:buy;display:flex;align-items:center;justify-content:space-between;gap:12px}
+@media (min-width:760px){.pbuy{flex-direction:column;align-items:stretch;justify-content:flex-start;text-align:right}}
+.amount{margin:0;color:var(--muted)}
+.amount b{display:block;font-size:2.3rem;line-height:1.05;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.promo{margin:16px 0;padding:16px 18px;background:var(--bar);border-radius:6px;max-width:36em}
+.promo h4{margin:0 0 .3em}
+.promo p{margin:0 0 .75em}
+.inds{list-style:none;padding:0;margin:.25em 0 1em;display:grid;gap:0 28px;max-width:36em}
+@media (min-width:560px){.inds{grid-template-columns:1fr 1fr}}
+.inds li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dotted var(--rule);margin:0}
+.inds span{font-variant-numeric:tabular-nums;color:var(--muted)}
+.notice{margin:8px 0 0;padding:20px 22px;border:2px solid var(--ink);border-radius:6px;background:#fff}
+.notice p{margin:0}
+.notice + p{margin-top:12px}
+.paynote{margin:22px 0 0;max-width:44em}
+
+/* Steps */
+.steps{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:22px;counter-reset:step}
+@media (min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:step;border-top:3px solid var(--pine);padding-top:12px;margin:0}
+.steps li::before{content:counter(step);display:block;font-weight:700;color:var(--pine);font-size:.95rem}
+.steps b{display:block;font-size:1.1rem;margin:2px 0 4px}
+
+/* Delivery and refunds */
+.two{display:grid;gap:40px}
+@media (min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.two h2{font-size:1.6rem}
+.two ul{padding-left:1.1em}
+.cols{color:var(--muted);font-size:.95rem}
+
+/* Questions */
+.faq{max-width:46em}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-of-type{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;font-weight:700;padding:15px 30px 15px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:4px;top:22px;width:14px;height:14px;background:linear-gradient(var(--pine),var(--pine)) center/14px 2px no-repeat,linear-gradient(var(--pine),var(--pine)) center/2px 14px no-repeat}
+.faq details[open] summary::after{background:linear-gradient(var(--pine),var(--pine)) center/14px 2px no-repeat}
+.faq details > div{padding:0 0 12px}
+
+/* Legal pages */
+.legal{max-width:44em}
+.legal h1{font-size:clamp(1.9rem,1.5rem + 1.6vw,2.6rem);max-width:none}
+.legal h2{font-size:1.35rem;margin-top:1.8em;letter-spacing:-.01em}
+.legal table{margin:0 0 1em;font-size:.97rem}
+.legal .scroll{margin:0 0 1em}
+.legal .scroll table{min-width:560px;margin:0}
+.short{background:var(--wash);border-radius:6px;padding:16px 20px 6px;margin:0 0 1.5em}
+
+/* Footer */
+.foot{border-top:1px solid var(--rule);background:var(--wash);padding:36px 0 44px;font-size:.95rem}
+.foot nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 14px}
+.foot p{max-width:46em}
+.foot .fine{margin:0}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="seller" href="index.html">Lumora Group LLC</a>
+    <nav aria-label="Main"><a href="#prices">Prices</a><a href="#faq">Questions</a></nav>
+    <a class="btn" href="mailto:cottofranco@gmail.com?subject=Order%3A%20Florida%20new%20business%20list&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20to%20order%20a%20list.%0A%0AWhich%20list%20%28county%20or%20industry%29%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Email to order</a>
+  </div>
+</header>
+<main id="main">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>New Florida businesses in your county, every Monday.</h1>
+      <p class="lede">A clean spreadsheet of the businesses that just registered in your county, built from the state's public daily filing files. For insurance agents, bookkeepers, banks and local shops that sell to new businesses.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:cottofranco@gmail.com?subject=Order%3A%20Florida%20new%20business%20list&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20to%20order%20a%20list.%0A%0AWhich%20list%20%28county%20or%20industry%29%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Email to order</a>
+        <a class="btn ghost" href="#rows">See real rows</a>
+      </div>
+      <p class="fine">From $19 USD. No contract. Sold by Lumora Group LLC, Gainesville, Florida.</p>
+      <p class="state-line">The state posts these filings free at <a href="https://dos.fl.gov/sunbiz/">sunbiz.org</a>. We are a private company, not affiliated with the State of Florida.</p>
+    </div>
+    <aside class="latest" aria-labelledby="latest-h">
+      <h2 id="latest-h">New businesses in two recent weeks of state files</h2>
+      <dl>
+        <div><dt>Alachua County, Sep 14 to 18</dt><dd>85</dd></div>
+        <div><dt>Alachua County, Sep 21 to 25</dt><dd>83</dd></div>
+        <div><dt>All of Florida, Sep 14 to 25</dt><dd>27,543</dd></div>
+      </dl>
+      <p class="fine">Dates are the workdays the state posted its files.</p>
+    </aside>
+  </div>
+</div>
+
+<section class="wash" id="rows" aria-labelledby="rows-h">
+  <div class="wrap">
+    <h2 id="rows-h">What the state posts, and what you get</h2>
+    <p class="intro">Every workday the state posts one text file of new companies and one of new DBAs, for all 67 counties at once. Here is part of the company file for Friday, September 25, 2026, and what we turn it into.</p>
+
+    <figure>
+      <div class="file-head">
+        <h3>The state's file</h3>
+        <p class="fine"><span class="fname">20260925c.txt</span>, lines 953 to 956 of 2,168</p>
+      </div>
+      <p class="sr">Four lines of the raw file, shown as a printout: long runs of capital letters and spaces with no column names. The readable parts are four business names (WINKSBYJEWELISSALLC, ELITE UNLIMITED AUTO GROUP LLC, CARTOUCHE, LLC and FINS AND FLORA LLC), the code AFLAL for an active Florida LLC, the cities Haines City, Gainesville, Port St. Lucie and Boca Raton, and filing dates written as 09192026 and 09212026. Only ELITE UNLIMITED AUTO GROUP LLC in Gainesville is in Alachua County.</p>
+      <div class="paper">
+<pre aria-hidden="true"><span class="m">XXXXXXXXXXXX</span>WINKSBYJEWELISSALLC                                                                                                                                                                             AFLAL           <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>HAINES CITY                   <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>09192026<span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span><span class="more"> 900 more characters in this line</span>
+<span class="m">XXXXXXXXXXXX</span><mark>ELITE UNLIMITED AUTO GROUP LLC</mark>                                                                                                                                                                  AFLAL           <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span><mark>GAINESVILLE</mark>                   <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>09212026<span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span><span class="more"> 900 more characters in this line</span>
+<span class="m">XXXXXXXXXXXX</span>CARTOUCHE, LLC                                                                                                                                                                                  AFLAL           <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>PORT ST. LUCIE                <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>09192026<span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span><span class="more"> 900 more characters in this line</span>
+<span class="m">XXXXXXXXXXXX</span>FINS AND FLORA LLC                                                                                                                                                                              AFLAL           <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>BOCA RATON                    <span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>09212026<span class="m">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span><span class="more"> 900 more characters in this line</span></pre>
+      </div>
+      <figcaption class="below">Each company is one line of 1,440 characters with no column names. We show the first 540. Only the highlighted company of these four is in Alachua County. On this page we blanked out document numbers, addresses and the other private details.</figcaption>
+    </figure>
+
+    <div class="work">
+      <h3>What we do with it, every workday</h3>
+      <ul>
+        <li><b>Read</b> both of the day's files, companies and DBAs, the morning the state posts them.</li>
+        <li><b>Place</b> each company in its county by ZIP code. The state's company file has no county field.</li>
+        <li><b>Keep</b> each active filing once. Repeats and filings that are not new businesses come out.</li>
+        <li><b>Translate</b> the codes. FLAL becomes Florida LLC, AMBR becomes Authorized Member, and people's names read first name first.</li>
+        <li><b>Tag</b> a likely industry from the business name, and flag filings made through a filing service.</li>
+        <li><b>Sort</b> by city and name, save a spreadsheet that opens in Excel, add a READ-ME, and email it to you.</li>
+      </ul>
+    </div>
+
+    <figure class="sheet">
+      <div class="sheet-head">
+        <h3 id="sheet-h">Your spreadsheet</h3>
+        <p class="fine">5 of the 21 new Alachua County businesses in the state's files for Friday, September 25, 2026.<span class="swipe"> Swipe the table sideways to see every column.</span></p>
+      </div>
+      <div class="scroll" role="region" aria-labelledby="sheet-h" tabindex="0">
+        <table>
+          <caption class="sr">Sample rows: 5 new Alachua County businesses</caption>
+          <thead><tr><th scope="col">Business</th><th scope="col">Type</th><th scope="col">Industry</th><th scope="col">City</th><th scope="col">Filed</th></tr></thead>
+          <tbody>
+            <tr><td><mark>Elite Unlimited Auto Group LLC</mark></td><td>Florida LLC</td><td>Auto</td><td>Gainesville</td><td class="date">Sep 21, 2026</td></tr>
+            <tr><td>Huffman Home Repair LLC</td><td>Florida LLC</td><td>Construction and home services</td><td>Gainesville</td><td class="date">Sep 21, 2026</td></tr>
+            <tr><td>Suit-Case Closed Travel CO., LLC</td><td>Florida LLC</td><td class="none">Not tagged</td><td>Newberry</td><td class="date">Sep 20, 2026</td></tr>
+            <tr><td>Om Shiv11 INC</td><td>Florida corporation</td><td class="none">Not tagged</td><td>Gainesville</td><td class="date">Sep 25, 2026</td></tr>
+            <tr><td>Gulf To Atlantic</td><td>New DBA (fictitious name)</td><td class="none">Not tagged</td><td>Gainesville</td><td class="date">Sep 24, 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figcaption class="below">The highlighted row is the highlighted line in the state's file above. Your file also has each business's street and mailing address, owners and managers as filed, the registered agent, whether a filing service filed it, and the state document number. We leave those off this public page. <a href="mailto:cottofranco@gmail.com?subject=Free%20week%3A%20Alachua%20County%20new%20businesses&amp;body=Hi%20Franco%2C%0A%0APlease%20send%20me%20last%20week%27s%20Alachua%20County%20list%2C%20free.%0A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Get last week's Alachua list free</a>.</figcaption>
+    </figure>
+
+    <div class="value">
+      <p><b>What you pay for.</b> The state posts these filings free at <a href="https://dos.fl.gov/sunbiz/">sunbiz.org</a>, one business at a time, and in bulk as raw daily files like the one above. You pay us for the reading, sorting, cleaning and delivery. Lumora Group LLC is a private company, not affiliated with the State of Florida.</p>
+    </div>
+  </div>
+</section>
+
+<section id="who" aria-labelledby="who-h">
+  <div class="wrap">
+    <h2 id="who-h">Who uses these lists</h2>
+    <dl class="roles">
+      <div><dt>Insurance agents</dt><dd>A new LLC needs general liability, and workers' comp once it hires.</dd></div>
+      <div><dt>Accountants and bookkeepers</dt><dd>New owners need books, payroll and a tax plan from the first month.</dd></div>
+      <div><dt>Banks and credit unions</dt><dd>Business checking, card processing and a first loan.</dd></div>
+      <div><dt>Sign, print and marketing shops</dt><dd>Signs, business cards, a website and a grand opening.</dd></div>
+      <div><dt>Other local services</dt><dd>Cleaning, IT, office space, legal help: anyone who sells to businesses in their first months.</dd></div>
+    </dl>
+    <p>Made for letters, postcards and visits. The lists have no phone numbers and no email addresses.</p>
+  </div>
+</section>
+
+<section class="wash" id="prices" aria-labelledby="prices-h">
+  <div class="wrap">
+    <h2 id="prices-h">Prices</h2>
+    <p class="intro">One monthly list and three one-time lists. All prices are in US dollars.</p>
+    <ul class="prices">
+
+      <li class="price">
+        <h3>Alachua County new businesses: weekly list</h3>
+        <div class="pbuy">
+          <p class="amount"><b>$29</b> USD a month</p>
+          <a class="btn" data-pay="alachua_weekly" href="mailto:cottofranco@gmail.com?subject=Order%3A%20Alachua%20County%20new%20businesses%3A%20weekly%20list&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20the%20Alachua%20County%20weekly%20list%2C%20%2429%20USD%20a%20month.%0A%0ABusiness%20name%3A%0A%0AThanks%2C%0A"><span data-label>Email to order</span><span class="sr">: Alachua County weekly list</span></a>
+        </div>
+        <div class="pbody">
+          <p>Every Monday, the businesses that registered in Alachua County in the past week: Gainesville, Alachua, Newberry, High Springs, Archer, Hawthorne, Micanopy and Waldo.</p>
+          <ul class="facts">
+            <li>Lately 83 to 85 businesses a week.</li>
+            <li>Renews every month. Cancel anytime by email.</li>
+            <li>Daily instead of weekly, at the same price, if you ask.</li>
+          </ul>
+          <div class="promo" id="free-week">
+            <h4>First week free</h4>
+            <p>Email us and we send last week's Alachua County list, free. No card, nothing renews, one free list per business. <a href="terms.html#free-week">Promotion terms</a></p>
+            <a class="btn ghost sm" href="mailto:cottofranco@gmail.com?subject=Free%20week%3A%20Alachua%20County%20new%20businesses&amp;body=Hi%20Franco%2C%0A%0APlease%20send%20me%20last%20week%27s%20Alachua%20County%20list%2C%20free.%0A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Get the free week</a>
+          </div>
+          <p>Another county? The same weekly list is $29 USD a month for any Florida county, or $49 USD a month for Miami-Dade, Broward, Pinellas, Palm Beach, Orange, Hillsborough or Duval. <a data-pay="county_weekly_other" data-live="Order another county by card" href="mailto:cottofranco@gmail.com?subject=Order%3A%20weekly%20list%20for%20another%20Florida%20county&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20the%20weekly%20list%20for%20another%20Florida%20county%2C%20%2429%20USD%20a%20month.%0A%0ACounty%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Email to order another county</a>, or <a data-pay="county_weekly_large" data-live="order one of the 7 largest by card" href="mailto:cottofranco@gmail.com?subject=Order%3A%20weekly%20list%20for%20a%20large%20Florida%20county&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20the%20weekly%20list%20for%20one%20of%20the%207%20largest%20counties%2C%20%2449%20USD%20a%20month.%0A%0ACounty%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">order one of the 7 largest</a>.</p>
+        </div>
+      </li>
+
+      <li class="price">
+        <h3>One Florida county: new businesses from the last 2 weeks</h3>
+        <div class="pbuy">
+          <p class="amount"><b>$19</b> USD, one time</p>
+          <a class="btn" data-pay="county_2wk" href="mailto:cottofranco@gmail.com?subject=Order%3A%20One%20Florida%20county%3A%20new%20businesses%20from%20the%20last%202%20weeks&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20one%20county%2C%20last%202%20weeks%2C%20%2419%20USD.%0A%0ACounty%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A"><span data-label>Email to order</span><span class="sr">: one Florida county, last 2 weeks</span></a>
+        </div>
+        <div class="pbody">
+          <p>Every new business in one Florida county you choose, from the state's last 10 workdays of files. Any of the 67 counties.</p>
+          <ul class="facts">
+            <li>Last count: Alachua 168, Leon 197, Marion 360.</li>
+            <li>Miami-Dade, Broward, Pinellas, Palm Beach, Orange, Hillsborough and Duval cost $39 USD (Miami-Dade had 4,863). <a data-pay="county_2wk_large" data-live="Order a large county by card" href="mailto:cottofranco@gmail.com?subject=Order%3A%20One%20large%20Florida%20county%3A%20new%20businesses%20from%20the%20last%202%20weeks&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20one%20of%20the%207%20largest%20counties%2C%20last%202%20weeks%2C%20%2439%20USD.%0A%0ACounty%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A">Email to order a large county</a></li>
+            <li>Sent by email within 1 business day of payment.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="price">
+        <h3>One industry, all of Florida: new businesses from the last 2 weeks</h3>
+        <div class="pbuy">
+          <p class="amount"><b>$39</b> USD, one time</p>
+          <a class="btn" data-pay="industry_2wk" href="mailto:cottofranco@gmail.com?subject=Order%3A%20One%20industry%2C%20all%20of%20Florida%3A%20new%20businesses%20from%20the%20last%202%20weeks&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20one%20industry%2C%20all%20of%20Florida%2C%20last%202%20weeks%2C%20%2439%20USD.%0A%0AIndustry%3A%0ABusiness%20name%3A%0A%0AThanks%2C%0A"><span data-label>Email to order</span><span class="sr">: one industry, all of Florida</span></a>
+        </div>
+        <div class="pbody">
+          <p>Every new business in one industry across Florida, from the state's last 10 workdays of files. Last count, September 14 to 25:</p>
+          <ul class="inds">
+            <li>Construction and home services <span>1,407</span></li>
+            <li>Real estate <span>1,149</span></li>
+            <li>Health and medical <span>912</span></li>
+            <li>Trucking and logistics <span>879</span></li>
+            <li>Restaurants and food <span>520</span></li>
+            <li>Cleaning <span>472</span></li>
+            <li>Auto <span>422</span></li>
+            <li>Beauty and personal care <span>418</span></li>
+            <li>Retail and ecommerce <span>403</span></li>
+            <li>Lawn and landscaping <span>289</span></li>
+            <li>Fitness <span>78</span></li>
+          </ul>
+          <ul class="facts">
+            <li>We find the industry from words in the business name, like ROOFING or PLUMBING. A few matches are wrong, and a name like ABC Holdings LLC is missed.</li>
+            <li>Sent by email within 1 business day of payment.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="price">
+        <h3>All of Florida: new businesses from the last 2 weeks</h3>
+        <div class="pbuy">
+          <p class="amount"><b>$49</b> USD, one time</p>
+          <a class="btn" data-pay="florida_2wk" href="mailto:cottofranco@gmail.com?subject=Order%3A%20All%20of%20Florida%3A%20new%20businesses%20from%20the%20last%202%20weeks&amp;body=Hi%20Franco%2C%0A%0AI%20would%20like%20all%20of%20Florida%2C%20last%202%20weeks%2C%20%2449%20USD.%0A%0ABusiness%20name%3A%0A%0AThanks%2C%0A"><span data-label>Email to order</span><span class="sr">: all of Florida, last 2 weeks</span></a>
+        </div>
+        <div class="pbody">
+          <p>Every new business in all 67 counties, from the state's last 10 workdays of files, in one spreadsheet.</p>
+          <ul class="facts">
+            <li>Last count: 27,543 businesses, September 14 to 25, 2026.</li>
+            <li>Sent by email within 1 business day of payment.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <p class="paynote">You pay through Stripe's secure checkout (HTTPS). We never see or store your card number. Your card statement will show <b>LUMORA GROUP</b>.</p>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">From your first email to every Monday</h2>
+    <ol class="steps">
+      <li><b>Today</b>Email us. For Alachua County we send last week's list free, with no card and nothing to cancel.</li>
+      <li><b>When you order</b>Pay through Stripe's secure checkout. If you ordered by email, we reply with the link. Your first list arrives within 1 business day.</li>
+      <li><b>Every Monday morning</b>The past week's new businesses in your county arrive in your inbox.</li>
+      <li><b>Whenever you want</b>Email us to cancel. You are not charged again, and you keep every list you got.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="wash" aria-label="Delivery, refunds and cancellation">
+  <div class="wrap two">
+    <div id="delivery">
+      <h2>Delivery</h2>
+      <ul>
+        <li><b>Weekly lists</b> arrive by email every Monday morning and cover the files the state posted the week before. Daily instead, at the same price, if you ask.</li>
+        <li><b>One-time lists</b> arrive by email within 1 business day of payment.</li>
+        <li><b>Format:</b> a CSV spreadsheet that opens in Excel, Google Sheets or Numbers, plus a READ-ME.</li>
+        <li>These are digital files. Nothing is shipped.</li>
+      </ul>
+      <p class="cols">Every file has these 14 columns: Business, Type, Filed, Industry, County, Street, City, State, ZIP, Mailing address, Owners and managers, Registered agent, Used a filing service, State document number.</p>
+    </div>
+    <div id="refunds">
+      <h2>Refunds and cancellation</h2>
+      <ul>
+        <li><b>Weekly lists:</b> cancel anytime by email, with no contract. You are not charged again after we get your email. Weeks already delivered are not refunded. If a week's file is wrong or empty, tell us within 7 days and we resend it or refund that week.</li>
+        <li><b>One-time lists:</b> if the file is wrong, empty or not what you ordered, tell us within 7 days and we send the right file or refund you in full.</li>
+        <li>Refunds go back to your card through Stripe and usually appear in 5 to 10 business days.</li>
+        <li>Think a charge is wrong? Email us first. We answer within 1 business day.</li>
+      </ul>
+      <p><a href="terms.html">Read the full terms</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <h2 id="faq-h">Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Where does the data come from?</summary>
+        <div><p>From the public daily data files of the Florida Division of Corporations, which the state posts every workday for anyone to download (<a href="https://dos.fl.gov/sunbiz/other-services/data-downloads/daily-data/">the state's daily data page</a>). We add only three things that are not in those files: the county, from the ZIP code; the industry guess, from the business name; and a note when a known filing service filed the paperwork.</p></div>
+      </details>
+      <details>
+        <summary>How is this different from searching sunbiz.org?</summary>
+        <div><p>Sunbiz.org looks up one business at a time. Its ZIP code search returns every company ever registered at that ZIP, old and new, in alphabetical order and without filing dates, so it does not show you who just started. The new filings are in the state's bulk daily files, for all of Florida at once, as fixed-width text you download from the state's server and decode yourself. We do that work every workday and send you your county, sorted.</p><p>One thing the state does offer: a free search of the prior week's DBAs (fictitious names) by county. DBAs are about 1 in 7 rows in our lists; the rest are LLCs, corporations and other companies, which that search does not cover.</p></div>
+      </details>
+      <details>
+        <summary>Are there phone numbers or email addresses?</summary>
+        <div><p>No. The state's files do not have them and we do not add them. Each row has the business's street and mailing address as filed, which is what you need for letters, postcards and visits.</p></div>
+      </details>
+      <details>
+        <summary>Which counties and industries can I pick?</summary>
+        <div><p>Any of Florida's 67 counties, and any of the 11 industries listed under Prices. Need something else, like two counties or one city? <a href="mailto:cottofranco@gmail.com?subject=Question%20about%20the%20Florida%20new%20business%20lists&amp;body=Hi%20Franco%2C%0A%0A">Email us</a> and we will tell you if we can do it and what it costs.</p></div>
+      </details>
+      <details>
+        <summary>How fresh is it?</summary>
+        <div><p>The state adds most company filings to its daily file a few days after the filing date. DBAs often show up the same day. We read each file the morning the state posts it, and your Monday list covers the files from the week before.</p></div>
+      </details>
+      <details>
+        <summary>Can I use the list for email or phone calls?</summary>
+        <div><p>The lists are made for mail and visits. If you find a phone number or email address elsewhere, follow the laws that apply: CAN-SPAM for email, and the Telemarketing Sales Rule, the TCPA and Florida section 501.059 for calls and texts. Never say or suggest that you are from or approved by the State of Florida. Our <a href="terms.html#use">terms</a> list the rules.</p></div>
+      </details>
+      <details>
+        <summary>Do you work in Spanish?</summary>
+        <div><p lang="es">Sí. Escríbanos en español o en inglés.</p><p>Yes. Write to us in Spanish or English. Business records stay as the state filed them, in English.</p></div>
+      </details>
+      <details>
+        <summary>My business is on one of your lists. Can I be left out?</summary>
+        <div><p>Yes. <a href="mailto:cottofranco@gmail.com?subject=Please%20leave%20my%20business%20off%20your%20lists&amp;body=Hi%20Franco%2C%0A%0APlease%20leave%20my%20business%20off%20your%20future%20lists.%0A%0ABusiness%20name%3A%0ACity%3A%0A%0AThanks%2C%0A">Email us</a> your business name and city, and we leave it off future lists within 2 business days. We cannot change the state's records; for that, contact the Florida Division of Corporations.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="wash" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Who runs this</h2>
+    <p class="intro">Lumora Group LLC is a small company in Gainesville, Florida. Franco builds these lists every workday from the state's files and answers every email himself. If you got a note from Franco about these lists, it came from us.</p>
+    <p><a class="btn" href="mailto:cottofranco@gmail.com?subject=Question%20about%20the%20Florida%20new%20business%20lists&amp;body=Hi%20Franco%2C%0A%0A">Email cottofranco@gmail.com</a></p>
+    <p class="fine">We answer within 1 business day, in English or Spanish.</p>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Lumora Group LLC</b>, Gainesville, Florida. <a href="mailto:cottofranco@gmail.com">cottofranco@gmail.com</a></p>
+    <nav aria-label="Footer"><a href="#prices">Prices</a><a href="#delivery">Delivery</a><a href="#refunds">Refunds and cancellation</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+    <p>Built from public filing records of the Florida Division of Corporations, which the state posts free at sunbiz.org. Lumora Group LLC is a private company, not affiliated with the State of Florida.</p>
+    <p class="fine">&copy; 2026 Lumora Group LLC. This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+<script>
+/* ==========================================================================
+   LIVE PAYMENT LINKS: the one place to paste them.
+   After Stripe activation, paste each LIVE payment link (https://buy.stripe.com/...)
+   between the quotes. A button with a link here goes straight to Stripe checkout;
+   a button with "" keeps its "Email to order" email link. Test links (test_...)
+   are ignored on purpose. Stripe product names must match this page word for word.
+   ========================================================================== */
+var PAYMENT_LINKS = {
+  alachua_weekly:      "", /* "Alachua County new businesses: weekly list", 29.00 USD a month */
+  county_weekly_other: "", /* weekly list, any other county, 29.00 USD a month (no Stripe product yet) */
+  county_weekly_large: "", /* weekly list, 7 largest counties, 49.00 USD a month (no Stripe product yet) */
+  county_2wk:          "", /* "One Florida county: new businesses from the last 2 weeks", 19.00 USD */
+  county_2wk_large:    "", /* same, 7 largest counties, 39.00 USD (no Stripe product yet) */
+  industry_2wk:        "", /* "One industry, all of Florida: new businesses from the last 2 weeks", 39.00 USD */
+  florida_2wk:         ""  /* "All of Florida: new businesses from the last 2 weeks", 49.00 USD */
+};
+document.querySelectorAll("[data-pay]").forEach(function (a) {
+  var url = PAYMENT_LINKS[a.getAttribute("data-pay")] || "";
+  if (!/^https:\/\/buy\.stripe\.com\/(?!test_)[A-Za-z0-9_]+$/.test(url)) return;
+  a.href = url;
+  var label = a.querySelector("[data-label]");
+  if (label) label.textContent = "Order and pay by card";
+  else a.textContent = a.getAttribute("data-live");
+});
+</script>
+</body>
+</html>
