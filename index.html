@@ -503,13 +503,13 @@ td.date{white-space:nowrap}
    are ignored on purpose. Stripe product names must match this page word for word.
    ========================================================================== */
 var PAYMENT_LINKS = {
-  alachua_weekly:      "", /* "Alachua County new businesses: weekly list", 29.00 USD a month */
-  county_weekly_other: "", /* weekly list, any other county, 29.00 USD a month (no Stripe product yet) */
-  county_weekly_large: "", /* weekly list, 7 largest counties, 49.00 USD a month (no Stripe product yet) */
-  county_2wk:          "", /* "One Florida county: new businesses from the last 2 weeks", 19.00 USD */
-  county_2wk_large:    "", /* same, 7 largest counties, 39.00 USD (no Stripe product yet) */
-  industry_2wk:        "", /* "One industry, all of Florida: new businesses from the last 2 weeks", 39.00 USD */
-  florida_2wk:         ""  /* "All of Florida: new businesses from the last 2 weeks", 49.00 USD */
+  alachua_weekly:      "https://buy.stripe.com/9B69ATbU79FWb2u0B55wI00", /* "Alachua County new businesses: weekly list", 29.00 USD a month */
+  county_weekly_other: "https://buy.stripe.com/eVq6oH7DRdWcdaC4Rl5wI01", /* "Florida county new businesses: weekly list", 29.00 USD a month, asks "Florida county" */
+  county_weekly_large: "https://buy.stripe.com/fZu14n3nB3hy5Ia3Nh5wI02", /* "Large Florida county new businesses: weekly list", 49.00 USD a month, County dropdown of the 7 */
+  county_2wk:          "https://buy.stripe.com/7sY6oHf6j5pG8Um6Zt5wI03", /* "One Florida county: new businesses from the last 2 weeks", 19.00 USD, asks "Florida county" */
+  county_2wk_large:    "https://buy.stripe.com/4gMdR93nB9FWdaCabF5wI04", /* "One large Florida county: new businesses from the last 2 weeks", 39.00 USD, County dropdown of the 7 */
+  industry_2wk:        "https://buy.stripe.com/dRm9AT6zNbO42vYbfJ5wI05", /* "One industry, all of Florida: new businesses from the last 2 weeks", 39.00 USD, asks "Industry" */
+  florida_2wk:         "https://buy.stripe.com/3cI6oH6zNdWcgmO0B55wI06"  /* "All of Florida: new businesses from the last 2 weeks", 49.00 USD */
 };
 document.querySelectorAll("[data-pay]").forEach(function (a) {
   var url = PAYMENT_LINKS[a.getAttribute("data-pay")] || "";
